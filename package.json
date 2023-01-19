@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "firebase-admin": "^11.5.0"
+  },
+  "name": "torrent-checker",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qurt/torrent-checker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qurt/torrent-checker/issues"
+  },
+  "homepage": "https://github.com/qurt/torrent-checker#readme"
+}
