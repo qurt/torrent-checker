@@ -1,15 +1,11 @@
-import admin from "firebase-admin";
+import { initializeApp, applicationDefault, cert, ServiceAccount } from 'firebase-admin/app';
+import { getFirestore, Timestamp, FieldValue } from 'firebase-admin/firestore';
+
 import serviceAccount from './serviceAccountKey.json'
 
-if (!admin.app.length) {
-  try {
-    admin.initializeApp({
-      credential: admin.credential.cert(JSON.stringify(serviceAccount)),
-      databaseURL: "https://anime-checker-d8147-default-rtdb.europe-west1.firebasedatabase.app"
-    })
-  } catch (err) {
-    console.log('Firebase admin initialization error', err);
-  }
-}
+initializeApp({
+  credential: cert(serviceAccount as ServiceAccount),
+  databaseURL: "https://anime-checker-d8147-default-rtdb.europe-west1.firebasedatabase.app"
+})
 
-export default admin.firestore();
+export const db = getFirestore()
