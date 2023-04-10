@@ -6,8 +6,14 @@ type Data = {
   data: ListItem[]
 }
 
-type ListItem = {
-  name: string
+export type ListItem = {
+  name: string,
+  source_folder: string,
+  season: number,
+  studio: string,
+  url: string,
+  seriesDowload: number,
+  seriesTotal: number
 }
 
 export default async function handler(
